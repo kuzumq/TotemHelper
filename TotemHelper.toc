@@ -1,0 +1,7 @@
+﻿## Interface: 70200
+## Title: Totem Helper
+## Author: Kuzum
+## SavedVariables: mucmashroom
+## Version: 1.0
+
+data.lua
