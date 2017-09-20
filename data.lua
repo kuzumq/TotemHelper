@@ -31,7 +31,9 @@ end
 function Listener:Remove(name, event)
 
 	if listeners[event] then
+	
 		listeners[event][name] = nil
+		
 	end
 	
 end
@@ -76,6 +78,7 @@ MushFrame:SetScript("OnMouseDown", function(self, button)
   end
   
 end)
+
 MushFrame:SetScript("OnMouseUp", function(self, button)
 
   if button == "LeftButton" and self.isMoving then
@@ -86,6 +89,7 @@ MushFrame:SetScript("OnMouseUp", function(self, button)
   end
   
 end)
+
 MushFrame:SetScript("OnHide", function(self)
 
   if ( self.isMoving ) then
@@ -96,6 +100,7 @@ MushFrame:SetScript("OnHide", function(self)
   end
   
 end)
+
 MushFrame:SetPoint("CENTER"); MushFrame:SetWidth(58); MushFrame:SetHeight(58);
 local icon = MushFrame:CreateTexture("ARTWORK");
 icon:SetAllPoints();
@@ -104,7 +109,6 @@ icon:SetVertexColor(1, 0.2, 0.2, 1);
 local text = MushFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
 text:SetPoint("CENTER")
 text:SetFont("Fonts\\FRIZQT__.TTF", 30, "OUTLINE")
-
 local ag = MushFrame:CreateAnimationGroup()
 local a1 = ag:CreateAnimation("Rotation")
 a1:SetDegrees(-360)
@@ -136,7 +140,9 @@ C_Timer.NewTicker(0.1, (function()
 	local totemtime = totel_time - GetTime()
 	
 	if totemtime < 0 then
+	
 		icon:SetVertexColor(1, 0.2, 0.2, 1);
+		
 	end
 	
 end), nil)
